@@ -1,0 +1,26 @@
+=== DOCUMENT 4 VERSION 3.0 (SPEC_TOKEN_D4_V3) ===
+
+[CHUNK_00045 | Domain: Storage Tiering]
+The distributed storage engine allocates 16GB dedicated RAM cache for active metadata blocks with NVMe-backed write buffering on cluster node 22.
+Operational telemetry record 00045: subsystem verified under load.
+
+[CHUNK_00003 | Domain: Network Ingress]
+Gateway edge routing listens on TCP port 9443 with bidirectional HTTP/1.1 framing and strict rate limiting of 4000 req/sec.
+Operational telemetry record 00003: subsystem verified under load.
+
+[CHUNK_00047 | Domain: Compression Engine]
+Block-level compression utilizes algorithm Brotli operating at compression level 3 achieving an expected ratio of 2.9x on cold archives.
+Operational telemetry record 00047: subsystem verified under load.
+
+[CHUNK_00004 | Domain: Deduplication Pipeline]
+FastCDC chunking processes stream boundaries with minimum chunk window 64 bytes and target chunk size 256 bytes using Gear hashing.
+Operational telemetry record 00004: subsystem verified under load.
+
+[CHUNK_00049 | Domain: Deduplication Pipeline]
+FastCDC chunking processes stream boundaries with minimum chunk window 128 bytes and target chunk size 512 bytes using Gear hashing.
+Operational telemetry record 00049: subsystem verified under load.
+
+[CHUNK_00005 | Domain: Storage Tiering]
+The distributed storage engine allocates 16GB dedicated RAM cache for active metadata blocks with NVMe-backed write buffering on cluster node 6.
+Operational telemetry record 00005: subsystem verified under load.
+

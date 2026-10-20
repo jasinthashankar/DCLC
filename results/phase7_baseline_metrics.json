@@ -1,0 +1,59 @@
+{
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.10",
+  "pytorch": "2.14.1+cpu",
+  "numpy": "2.5.4",
+  "total_slots": 46,
+  "unique_chunks_dclc": 32,
+  "unique_chunks_baseline": 46,
+  "dedup_ratio": 0.30434782608695654,
+  "embedding_dim": 384,
+  "matrix_dtype": "float32",
+  "base_raw_matrix_bytes": 70656,
+  "dclc_raw_matrix_bytes": 49152,
+  "base_store_deep_bytes": 146338,
+  "dclc_store_deep_bytes": 102988,
+  "base_bm25_deep_bytes": 111179,
+  "dclc_bm25_deep_bytes": 90958,
+  "base_slots_deep_bytes": 21990,
+  "dclc_chunk_idx_deep_bytes": 23591,
+  "base_retriever_total_bytes": 276169,
+  "dclc_retriever_total_bytes": 211076,
+  "registry_deep_bytes": 37219,
+  "base_report": {
+    "p1": 1.0,
+    "p3": 0.4333333333333333,
+    "p5": 0.28,
+    "r1": 0.35,
+    "r3": 0.45,
+    "r5": 0.4833333333333333,
+    "violations": 0
+  },
+  "dclc_report": {
+    "p1": 1.0,
+    "p3": 0.4333333333333333,
+    "p5": 0.28,
+    "r1": 0.35,
+    "r3": 0.45,
+    "r5": 0.4833333333333333,
+    "violations": 0
+  },
+  "base_lat": {
+    "mean_ms": 11.970227401005104,
+    "median_ms": 12.045849987771362,
+    "p90_ms": 12.942099999054335,
+    "p95_ms": 13.533545014797708,
+    "min_ms": 10.163200000533834,
+    "max_ms": 17.510500008938834,
+    "total_queries_measured": 500
+  },
+  "dclc_lat": {
+    "mean_ms": 12.201152200868819,
+    "median_ms": 12.082649991498329,
+    "p90_ms": 13.686639978550375,
+    "p95_ms": 14.494735006883275,
+    "min_ms": 9.803199995076284,
+    "max_ms": 20.180599996820092,
+    "total_queries_measured": 500
+  }
+}

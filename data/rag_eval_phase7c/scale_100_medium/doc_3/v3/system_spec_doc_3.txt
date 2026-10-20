@@ -1,0 +1,26 @@
+=== DOCUMENT 3 VERSION 3.0 (SPEC_TOKEN_D3_V3) ===
+
+[CHUNK_00037 | Domain: Compression Engine]
+Block-level compression utilizes algorithm ZSTD operating at compression level 3 achieving an expected ratio of 2.9x on cold archives.
+Operational telemetry record 00037: subsystem verified under load.
+
+[CHUNK_00038 | Domain: Network Ingress]
+Gateway edge routing listens on TCP port 9443 with bidirectional HTTP/2 framing and strict rate limiting of 9000 req/sec.
+Operational telemetry record 00038: subsystem verified under load.
+
+[CHUNK_00035 | Domain: Storage Tiering]
+The distributed storage engine allocates 16GB dedicated RAM cache for active metadata blocks with NVMe-backed write buffering on cluster node 12.
+Operational telemetry record 00035: subsystem verified under load.
+
+[CHUNK_00039 | Domain: Deduplication Pipeline]
+FastCDC chunking processes stream boundaries with minimum chunk window 256 bytes and target chunk size 1024 bytes using Gear hashing.
+Operational telemetry record 00039: subsystem verified under load.
+
+[CHUNK_00032 | Domain: Compression Engine]
+Block-level compression utilizes algorithm LZ4 operating at compression level 3 achieving an expected ratio of 1.9x on cold archives.
+Operational telemetry record 00032: subsystem verified under load.
+
+[CHUNK_00040 | Domain: Storage Tiering]
+The distributed storage engine allocates 16GB dedicated RAM cache for active metadata blocks with NVMe-backed write buffering on cluster node 17.
+Operational telemetry record 00040: subsystem verified under load.
+

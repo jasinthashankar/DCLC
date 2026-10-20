@@ -1,0 +1,166 @@
+{
+  "dataset_scope": {
+    "split": "test",
+    "families": "085-099",
+    "total_chunks": 464,
+    "total_logical_raw_bytes": 3564567,
+    "exact_duplicate_targets": 26,
+    "resemblance_targets": 542
+  },
+  "system_0_raw": {
+    "stored_bytes": 3564567,
+    "savings_pct": 0.0,
+    "compression_ratio": 1.0
+  },
+  "system_1_standalone_compression": {
+    "stored_bytes": 568542,
+    "savings_bytes": 2996025,
+    "savings_pct": 84.05018056891622,
+    "compression_ratio": 6.269663454942643
+  },
+  "system_2_exact_dedup": {
+    "stored_bytes": 554325,
+    "savings_bytes": 3010242,
+    "savings_pct": 84.44902284064236,
+    "compression_ratio": 6.430464077932621,
+    "exact_duplicates_eliminated": 24
+  },
+  "system_3_full_dclc": {
+    "Stream_Locality_W32": {
+      "stored_bytes": 435386,
+      "savings_bytes": 3129181,
+      "savings_pct": 87.7857254471581,
+      "compression_ratio": 8.187141984354113,
+      "candidate_recall": 0.940959409594096,
+      "recalled_pairs_count": 510,
+      "total_resem_targets": 542,
+      "avg_candidate_pool": 29.20689655172414,
+      "max_candidate_pool": 32,
+      "comparison_reduction_rate": 87.38362999925523,
+      "exact_duplicates_count": 24,
+      "deltas_accepted": 426,
+      "deltas_rejected": 0,
+      "standalone_stored": 14,
+      "reconstruction_verified_count": 426,
+      "reconstruction_success_rate": 100.0,
+      "timing_benchmarks": {
+        "total_pipeline_time_seconds": 0.22070070001063868,
+        "candidate_query_time_seconds": 0.0012909001088701189,
+        "scoring_time_seconds": 0.03185110026970506,
+        "delta_time_seconds": 0.17993549950188026,
+        "query_latency_ms_per_chunk": 0.002782112303599394,
+        "scoring_latency_ms_per_chunk": 0.06864461265022641,
+        "delta_latency_ms_per_chunk": 0.38779202478853503
+      }
+    },
+    "RP_LSH_L8_B6": {
+      "stored_bytes": 491085,
+      "savings_bytes": 3073482,
+      "savings_pct": 86.22315136733297,
+      "compression_ratio": 7.258554018143498,
+      "candidate_recall": 0.12546125461254612,
+      "recalled_pairs_count": 68,
+      "total_resem_targets": 542,
+      "avg_candidate_pool": 25.114224137931036,
+      "max_candidate_pool": 63,
+      "comparison_reduction_rate": 89.15152305056975,
+      "exact_duplicates_count": 24,
+      "deltas_accepted": 377,
+      "deltas_rejected": 0,
+      "standalone_stored": 63,
+      "reconstruction_verified_count": 377,
+      "reconstruction_success_rate": 100.0,
+      "timing_benchmarks": {
+        "total_pipeline_time_seconds": 0.2588401999673806,
+        "candidate_query_time_seconds": 0.03200749901589006,
+        "scoring_time_seconds": 0.026528199843596667,
+        "delta_time_seconds": 0.16141259955475107,
+        "query_latency_ms_per_chunk": 0.06898167891355618,
+        "scoring_latency_ms_per_chunk": 0.057172844490510064,
+        "delta_latency_ms_per_chunk": 0.34787198179903245
+      }
+    },
+    "Embedding_KNN_K20": {
+      "stored_bytes": 479304,
+      "savings_bytes": 3085263,
+      "savings_pct": 86.55365434286969,
+      "compression_ratio": 7.436964849031095,
+      "candidate_recall": 0.42435424354243545,
+      "recalled_pairs_count": 230,
+      "total_resem_targets": 542,
+      "avg_candidate_pool": 18.512931034482758,
+      "max_candidate_pool": 20,
+      "comparison_reduction_rate": 92.00305354881955,
+      "exact_duplicates_count": 24,
+      "deltas_accepted": 434,
+      "deltas_rejected": 0,
+      "standalone_stored": 6,
+      "reconstruction_verified_count": 434,
+      "reconstruction_success_rate": 100.0,
+      "timing_benchmarks": {
+        "total_pipeline_time_seconds": 0.31986759998835623,
+        "candidate_query_time_seconds": 0.09886510070646182,
+        "scoring_time_seconds": 0.022249300149269402,
+        "delta_time_seconds": 0.1853005001321435,
+        "query_latency_ms_per_chunk": 0.21307133772944356,
+        "scoring_latency_ms_per_chunk": 0.047951077907908195,
+        "delta_latency_ms_per_chunk": 0.39935452614686096
+      }
+    },
+    "Hierarchical_Cache64_ANN20": {
+      "stored_bytes": 459858,
+      "savings_bytes": 3104709,
+      "savings_pct": 87.09919044865758,
+      "compression_ratio": 7.751451535039077,
+      "candidate_recall": 0.07564575645756458,
+      "recalled_pairs_count": 41,
+      "total_resem_targets": 542,
+      "avg_candidate_pool": 0.9353448275862069,
+      "max_candidate_pool": 1,
+      "comparison_reduction_rate": 99.59596335741416,
+      "exact_duplicates_count": 24,
+      "deltas_accepted": 434,
+      "deltas_rejected": 0,
+      "standalone_stored": 6,
+      "reconstruction_verified_count": 434,
+      "reconstruction_success_rate": 100.0,
+      "timing_benchmarks": {
+        "total_pipeline_time_seconds": 2.886104900040664,
+        "candidate_query_time_seconds": 2.697479299851693,
+        "scoring_time_seconds": 0.002647200890351087,
+        "delta_time_seconds": 0.17401199956657365,
+        "query_latency_ms_per_chunk": 5.813532973818305,
+        "scoring_latency_ms_per_chunk": 0.005705174332653204,
+        "delta_latency_ms_per_chunk": 0.37502586113485703
+      }
+    }
+  },
+  "system_4_dclc_mrd": {
+    "parameters": {
+      "window_size": 3,
+      "max_refs": 3,
+      "resemblance_threshold": 0.7
+    },
+    "single_reference_sr": {
+      "stored_bytes": 459858,
+      "compression_ratio": 7.751,
+      "deltas_accepted": 434,
+      "deltas_rejected": 0,
+      "encoding_time_seconds": 0.167,
+      "restoration_throughput_mb_s": 172.16
+    },
+    "multi_reference_mrd": {
+      "stored_bytes": 439173,
+      "compression_ratio": 8.117,
+      "mrd_groups_accepted": 153,
+      "mrd_groups_rejected": 0,
+      "encoding_time_seconds": 0.1715,
+      "mg_group_restore_throughput_mb_s": 141.27,
+      "ms_single_restore_throughput_mb_s": 64.52
+    },
+    "restoration_throughput_comparison": {
+      "mg_group_restore_vs_sr_pct": -17.95,
+      "ms_single_restore_vs_sr_pct": -62.52
+    }
+  }
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "query_id": "q1_mem_v1",
+    "query_text": "How much dedicated ECC RAM is allocated per storage node in Version 1?",
+    "doc_filename": "system_spec_v1.txt",
+    "expected_answer_keywords": ["16GB", "ECC RAM", "chunk caching"],
+    "prohibited_keywords": ["64GB", "Version 2.0"]
+  },
+  {
+    "query_id": "q2_mem_v2",
+    "query_text": "What is the memory limit allocated per storage node in Version 2?",
+    "doc_filename": "system_spec_v2.txt",
+    "expected_answer_keywords": ["64GB", "ECC RAM", "75 percent"],
+    "prohibited_keywords": ["16GB", "Version 1.0"]
+  },
+  {
+    "query_id": "q3_comp_v1",
+    "query_text": "Which compression algorithm is used in Version 1 and what is its target ratio?",
+    "doc_filename": "system_spec_v1.txt",
+    "expected_answer_keywords": ["LZ4", "1.8x", "acceleration factor 1"],
+    "prohibited_keywords": ["ZSTD", "2.8x"]
+  },
+  {
+    "query_id": "q4_comp_v2",
+    "query_text": "What compression engine and level are specified for Version 2?",
+    "doc_filename": "system_spec_v2.txt",
+    "expected_answer_keywords": ["ZSTD", "level 3", "2.8x"],
+    "prohibited_keywords": ["LZ4", "1.8x"]
+  },
+  {
+    "query_id": "q5_port_v1",
+    "query_text": "On what TCP port does the primary API service listen in Version 1?",
+    "doc_filename": "system_spec_v1.txt",
+    "expected_answer_keywords": ["8080", "plain HTTP", "8081"],
+    "prohibited_keywords": ["9090", "9091"]
+  },
+  {
+    "query_id": "q6_port_v2",
+    "query_text": "What port does the API service use in Version 2?",
+    "doc_filename": "system_spec_v2.txt",
+    "expected_answer_keywords": ["9090", "HTTP/2", "9091"],
+    "prohibited_keywords": ["8080", "8081"]
+  },
+  {
+    "query_id": "q7_shared_overview",
+    "query_text": "What are the redundancy specifications for worker node power supplies and network links?",
+    "doc_filename": "system_spec_v1.txt",
+    "expected_answer_keywords": ["dual power supplies", "10Gbps Ethernet", "redundant rack units"],
+    "prohibited_keywords": []
+  },
+  {
+    "query_id": "q8_network_tls",
+    "query_text": "What TLS version and certificate rotation policy are mandated by the network policy?",
+    "doc_filename": "network_policy.md",
+    "expected_answer_keywords": ["TLS 1.3", "7-day rotation", "HashiCorp Vault"],
+    "prohibited_keywords": ["16GB", "LZ4"]
+  },
+  {
+    "query_id": "q9_network_whitelist",
+    "query_text": "What is the subnet CIDR range allowed for storage control plane access?",
+    "doc_filename": "network_policy.md",
+    "expected_answer_keywords": ["10.240.0.0/16", "VPN gateway"],
+    "prohibited_keywords": ["8080", "ZSTD"]
+  },
+  {
+    "query_id": "q10_backup_cron",
+    "query_text": "What is the nightly snapshot cron schedule and retention period in backup service?",
+    "doc_filename": "backup_service.py",
+    "expected_answer_keywords": ["0 2 * * *", "30", "RETENTION_DAYS"],
+    "prohibited_keywords": ["TLS 1.3"]
+  }
+]

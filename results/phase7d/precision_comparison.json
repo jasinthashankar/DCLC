@@ -1,0 +1,38 @@
+{
+  "float32": {
+    "precision": "float32",
+    "raw_vector_bytes": 568320,
+    "metadata_bytes": 0,
+    "storage_bytes": 568320,
+    "compression_ratio": 1.0,
+    "build_time_s": 24.46,
+    "p50_query_latency_us": 340.2,
+    "p95_query_latency_us": 512.5,
+    "top1_agreement_pct": 100.0,
+    "score_mae_vs_fp32": 0.0
+  },
+  "float16": {
+    "precision": "float16",
+    "raw_vector_bytes": 284160,
+    "metadata_bytes": 0,
+    "storage_bytes": 284160,
+    "compression_ratio": 2.0,
+    "build_time_s": 3.689,
+    "p50_query_latency_us": 1307.1,
+    "p95_query_latency_us": 1596.1,
+    "top1_agreement_pct": 100.0,
+    "score_mae_vs_fp32": 9.082962532301207e-06
+  },
+  "int8": {
+    "precision": "int8",
+    "raw_vector_bytes": 142080,
+    "metadata_bytes": 2960,
+    "storage_bytes": 145040,
+    "compression_ratio": 3.92,
+    "build_time_s": 4.487,
+    "p50_query_latency_us": 565.1,
+    "p95_query_latency_us": 722.2,
+    "top1_agreement_pct": 100.0,
+    "score_mae_vs_fp32": 0.0017155971493874047
+  }
+}

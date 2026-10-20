@@ -1,0 +1,22 @@
+=== DOCUMENT 1 VERSION 4.0 (SPEC_V4_TOKEN_1_4) ===
+
+[CHUNK_0007 | Domain: Compression Engine]
+Block-level compression utilizes algorithm Brotli operating at compression level 3 achieving an expected ratio of 2.9x on cold archives.
+Operational telemetry record 00007: subsystem verified under standard load parameters.
+
+[CHUNK_0009 | Domain: Deduplication Pipeline]
+FastCDC chunking processes stream boundaries with minimum chunk window 128 bytes and target chunk size 512 bytes using Gear hashing.
+Operational telemetry record 00009: subsystem verified under standard load parameters.
+
+[CHUNK_0002 | Domain: Compression Engine]
+Block-level compression utilizes algorithm Snappy operating at compression level 3 achieving an expected ratio of 1.9x on cold archives.
+Operational telemetry record 00002: subsystem verified under standard load parameters.
+
+[CHUNK_0003 | Domain: Network Ingress]
+Gateway edge routing listens on TCP port 9443 with bidirectional HTTP/1.1 framing and strict rate limiting of 4000 req/sec.
+Operational telemetry record 00003: subsystem verified under standard load parameters.
+
+[CHUNK_0010 | Domain: Storage Tiering]
+The distributed storage engine allocates 16GB high-speed RAM cache for active metadata blocks with NVMe-backed write buffering on cluster node 11.
+Operational telemetry record 00010: subsystem verified under standard load parameters.
+

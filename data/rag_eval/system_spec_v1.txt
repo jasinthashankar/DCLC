@@ -1,0 +1,25 @@
+# Cloud Storage System Architecture Specification - Version 1.0
+
+## 1. System Overview
+The primary storage cluster provides high-throughput block and object storage for multi-tenant applications.
+This document outlines the operational limits, hardware requirements, and compression policies for release 1.0.
+All worker nodes are deployed in redundant rack units with dual power supplies and 10Gbps Ethernet links.
+Data ingestion pipelines continuously stream incoming object payloads into variable-size content buffers.
+
+## 2. Memory Allocation and Limits
+In Version 1.0, each storage node is allocated exactly 16GB of dedicated ECC RAM for chunk caching.
+The memory pool is split into 60 percent read buffers and 40 percent write-ahead logs.
+If memory usage exceeds 15GB, aggressive cache eviction triggers to prevent out-of-memory panics.
+Buffer pools are pre-warmed during node initialization to minimize cold-start latency spikes.
+
+## 3. Compression Engine Configuration
+The storage pipeline in Version 1.0 uses standard LZ4 compression with acceleration factor 1.
+Compression blocks are sized at 64KB chunks to optimize sequential disk writes.
+Target compression ratio under typical enterprise workloads is approximately 1.8x.
+Decompression overhead remains under 500 nanoseconds per block on contemporary server architectures.
+
+## 4. Network and Service Ports
+The primary API service listens on TCP port 8080 using plain HTTP with mutual TLS at the load balancer.
+Administrative health checks query the internal telemetry endpoint on port 8081 every 5 seconds.
+Any node failing three consecutive health checks is automatically drained and removed from routing tables.
+Remote replication links operate across dedicated VLAN 402 with hardware checksum offloading.

@@ -1,0 +1,507 @@
+{
+  "metadata": {
+    "total_files": 4,
+    "total_chunks": 51,
+    "feature_dim": 128,
+    "context_radius": 4,
+    "context_sequence_len": 9,
+    "fastcdc": {
+      "min_size": 8192,
+      "avg_size": 16384,
+      "max_size": 32768
+    },
+    "algorithm1_params": {
+      "k_sub": 16,
+      "n_shingle": 5,
+      "lsh_choice": "Random projection (provisional)",
+      "shingle_hash_choice": "SHAKE-256 (provisional)"
+    }
+  },
+  "files": [
+    {
+      "file_id": 0,
+      "filename": "sample_doc_identical.txt",
+      "size_bytes": 241720,
+      "chunk_count": 14
+    },
+    {
+      "file_id": 1,
+      "filename": "sample_doc_v1.txt",
+      "size_bytes": 241720,
+      "chunk_count": 14
+    },
+    {
+      "file_id": 2,
+      "filename": "sample_doc_v2.txt",
+      "size_bytes": 243408,
+      "chunk_count": 14
+    },
+    {
+      "file_id": 3,
+      "filename": "sample_unrelated.txt",
+      "size_bytes": 140962,
+      "chunk_count": 9
+    }
+  ],
+  "chunks": [
+    {
+      "global_chunk_id": 0,
+      "file_id": 0,
+      "filename": "sample_doc_identical.txt",
+      "chunk_index": 0,
+      "byte_offset": 0,
+      "byte_length": 10872,
+      "sha256": "5ace2716d413165d22adf9490ea01a99b56b7e53b184dc79728519a04dcea58c"
+    },
+    {
+      "global_chunk_id": 1,
+      "file_id": 0,
+      "filename": "sample_doc_identical.txt",
+      "chunk_index": 1,
+      "byte_offset": 10872,
+      "byte_length": 32768,
+      "sha256": "5ea549a9c8fb82e6b275f966b801b4481f367803c77471f29dc97c534bd30510"
+    },
+    {
+      "global_chunk_id": 2,
+      "file_id": 0,
+      "filename": "sample_doc_identical.txt",
+      "chunk_index": 2,
+      "byte_offset": 43640,
+      "byte_length": 11251,
+      "sha256": "a29509d8962fc9622792793e9e7c39454b229ee53a481e7a7bd16c0658c3b4ce"
+    },
+    {
+      "global_chunk_id": 3,
+      "file_id": 0,
+      "filename": "sample_doc_identical.txt",
+      "chunk_index": 3,
+      "byte_offset": 54891,
+      "byte_length": 8843,
+      "sha256": "e125b29177dcea153142b3f8d9a14033040750ef214aba4ed288f6c97bdb06c7"
+    },
+    {
+      "global_chunk_id": 4,
+      "file_id": 0,
+      "filename": "sample_doc_identical.txt",
+      "chunk_index": 4,
+      "byte_offset": 63734,
+      "byte_length": 10551,
+      "sha256": "2d768fa21b718dce8d53a2a8d5c1f3217b7d41f461226149bc87a654a668791e"
+    },
+    {
+      "global_chunk_id": 5,
+      "file_id": 0,
+      "filename": "sample_doc_identical.txt",
+      "chunk_index": 5,
+      "byte_offset": 74285,
+      "byte_length": 14700,
+      "sha256": "ab9fecc6aa8a920ad163b39f351e5117cd466c210f35b336335fc0b0edc1f4e6"
+    },
+    {
+      "global_chunk_id": 6,
+      "file_id": 0,
+      "filename": "sample_doc_identical.txt",
+      "chunk_index": 6,
+      "byte_offset": 88985,
+      "byte_length": 25545,
+      "sha256": "a1ca3d7cec8c606ba794f510f3f8e6b624b6a0e311619beff9693926719724b8"
+    },
+    {
+      "global_chunk_id": 7,
+      "file_id": 0,
+      "filename": "sample_doc_identical.txt",
+      "chunk_index": 7,
+      "byte_offset": 114530,
+      "byte_length": 20687,
+      "sha256": "9fe2bcfc336191da86bb5fe5bce7f90ee7f89b5df76e4513c713c1389a63aa5d"
+    },
+    {
+      "global_chunk_id": 8,
+      "file_id": 0,
+      "filename": "sample_doc_identical.txt",
+      "chunk_index": 8,
+      "byte_offset": 135217,
+      "byte_length": 15921,
+      "sha256": "c29f3c6e1c9657ab0810512e529ed136f800bf7b5da54da146e57dd787f767b5"
+    },
+    {
+      "global_chunk_id": 9,
+      "file_id": 0,
+      "filename": "sample_doc_identical.txt",
+      "chunk_index": 9,
+      "byte_offset": 151138,
+      "byte_length": 26780,
+      "sha256": "90b9dc94a73f931d2df8840b85bcd94443b1fcaeb661a86dd88bd040b7fc01ad"
+    },
+    {
+      "global_chunk_id": 10,
+      "file_id": 0,
+      "filename": "sample_doc_identical.txt",
+      "chunk_index": 10,
+      "byte_offset": 177918,
+      "byte_length": 32768,
+      "sha256": "4db336b275a8f29931c33c05a5f7521be049ba6d4f7ed4dc1598f722a9383e7b"
+    },
+    {
+      "global_chunk_id": 11,
+      "file_id": 0,
+      "filename": "sample_doc_identical.txt",
+      "chunk_index": 11,
+      "byte_offset": 210686,
+      "byte_length": 10606,
+      "sha256": "a5f9455fe8ccd59b0eeb593bb566baa96123b71847f3302119ddbbc96df4034e"
+    },
+    {
+      "global_chunk_id": 12,
+      "file_id": 0,
+      "filename": "sample_doc_identical.txt",
+      "chunk_index": 12,
+      "byte_offset": 221292,
+      "byte_length": 20055,
+      "sha256": "296d509deef1c8c43b01acf0e93512303c02dc43c4e661a4bc214169d79bb547"
+    },
+    {
+      "global_chunk_id": 13,
+      "file_id": 0,
+      "filename": "sample_doc_identical.txt",
+      "chunk_index": 13,
+      "byte_offset": 241347,
+      "byte_length": 373,
+      "sha256": "622b3a5647760a9078156974ba095c8b156deb6adc55b1a77c0f2b2ee105118b"
+    },
+    {
+      "global_chunk_id": 14,
+      "file_id": 1,
+      "filename": "sample_doc_v1.txt",
+      "chunk_index": 0,
+      "byte_offset": 0,
+      "byte_length": 10872,
+      "sha256": "5ace2716d413165d22adf9490ea01a99b56b7e53b184dc79728519a04dcea58c"
+    },
+    {
+      "global_chunk_id": 15,
+      "file_id": 1,
+      "filename": "sample_doc_v1.txt",
+      "chunk_index": 1,
+      "byte_offset": 10872,
+      "byte_length": 32768,
+      "sha256": "5ea549a9c8fb82e6b275f966b801b4481f367803c77471f29dc97c534bd30510"
+    },
+    {
+      "global_chunk_id": 16,
+      "file_id": 1,
+      "filename": "sample_doc_v1.txt",
+      "chunk_index": 2,
+      "byte_offset": 43640,
+      "byte_length": 11251,
+      "sha256": "a29509d8962fc9622792793e9e7c39454b229ee53a481e7a7bd16c0658c3b4ce"
+    },
+    {
+      "global_chunk_id": 17,
+      "file_id": 1,
+      "filename": "sample_doc_v1.txt",
+      "chunk_index": 3,
+      "byte_offset": 54891,
+      "byte_length": 8843,
+      "sha256": "e125b29177dcea153142b3f8d9a14033040750ef214aba4ed288f6c97bdb06c7"
+    },
+    {
+      "global_chunk_id": 18,
+      "file_id": 1,
+      "filename": "sample_doc_v1.txt",
+      "chunk_index": 4,
+      "byte_offset": 63734,
+      "byte_length": 10551,
+      "sha256": "2d768fa21b718dce8d53a2a8d5c1f3217b7d41f461226149bc87a654a668791e"
+    },
+    {
+      "global_chunk_id": 19,
+      "file_id": 1,
+      "filename": "sample_doc_v1.txt",
+      "chunk_index": 5,
+      "byte_offset": 74285,
+      "byte_length": 14700,
+      "sha256": "ab9fecc6aa8a920ad163b39f351e5117cd466c210f35b336335fc0b0edc1f4e6"
+    },
+    {
+      "global_chunk_id": 20,
+      "file_id": 1,
+      "filename": "sample_doc_v1.txt",
+      "chunk_index": 6,
+      "byte_offset": 88985,
+      "byte_length": 25545,
+      "sha256": "a1ca3d7cec8c606ba794f510f3f8e6b624b6a0e311619beff9693926719724b8"
+    },
+    {
+      "global_chunk_id": 21,
+      "file_id": 1,
+      "filename": "sample_doc_v1.txt",
+      "chunk_index": 7,
+      "byte_offset": 114530,
+      "byte_length": 20687,
+      "sha256": "9fe2bcfc336191da86bb5fe5bce7f90ee7f89b5df76e4513c713c1389a63aa5d"
+    },
+    {
+      "global_chunk_id": 22,
+      "file_id": 1,
+      "filename": "sample_doc_v1.txt",
+      "chunk_index": 8,
+      "byte_offset": 135217,
+      "byte_length": 15921,
+      "sha256": "c29f3c6e1c9657ab0810512e529ed136f800bf7b5da54da146e57dd787f767b5"
+    },
+    {
+      "global_chunk_id": 23,
+      "file_id": 1,
+      "filename": "sample_doc_v1.txt",
+      "chunk_index": 9,
+      "byte_offset": 151138,
+      "byte_length": 26780,
+      "sha256": "90b9dc94a73f931d2df8840b85bcd94443b1fcaeb661a86dd88bd040b7fc01ad"
+    },
+    {
+      "global_chunk_id": 24,
+      "file_id": 1,
+      "filename": "sample_doc_v1.txt",
+      "chunk_index": 10,
+      "byte_offset": 177918,
+      "byte_length": 32768,
+      "sha256": "4db336b275a8f29931c33c05a5f7521be049ba6d4f7ed4dc1598f722a9383e7b"
+    },
+    {
+      "global_chunk_id": 25,
+      "file_id": 1,
+      "filename": "sample_doc_v1.txt",
+      "chunk_index": 11,
+      "byte_offset": 210686,
+      "byte_length": 10606,
+      "sha256": "a5f9455fe8ccd59b0eeb593bb566baa96123b71847f3302119ddbbc96df4034e"
+    },
+    {
+      "global_chunk_id": 26,
+      "file_id": 1,
+      "filename": "sample_doc_v1.txt",
+      "chunk_index": 12,
+      "byte_offset": 221292,
+      "byte_length": 20055,
+      "sha256": "296d509deef1c8c43b01acf0e93512303c02dc43c4e661a4bc214169d79bb547"
+    },
+    {
+      "global_chunk_id": 27,
+      "file_id": 1,
+      "filename": "sample_doc_v1.txt",
+      "chunk_index": 13,
+      "byte_offset": 241347,
+      "byte_length": 373,
+      "sha256": "622b3a5647760a9078156974ba095c8b156deb6adc55b1a77c0f2b2ee105118b"
+    },
+    {
+      "global_chunk_id": 28,
+      "file_id": 2,
+      "filename": "sample_doc_v2.txt",
+      "chunk_index": 0,
+      "byte_offset": 0,
+      "byte_length": 10872,
+      "sha256": "5ace2716d413165d22adf9490ea01a99b56b7e53b184dc79728519a04dcea58c"
+    },
+    {
+      "global_chunk_id": 29,
+      "file_id": 2,
+      "filename": "sample_doc_v2.txt",
+      "chunk_index": 1,
+      "byte_offset": 10872,
+      "byte_length": 32768,
+      "sha256": "93dd5b7695a105419646ab01d834db7dd2d54bed39aadcfb4c33a55f9a24540c"
+    },
+    {
+      "global_chunk_id": 30,
+      "file_id": 2,
+      "filename": "sample_doc_v2.txt",
+      "chunk_index": 2,
+      "byte_offset": 43640,
+      "byte_length": 10439,
+      "sha256": "d81b884ec691f94b3461de8eda01b9453f1f04016971fa975d93e6f77062590d"
+    },
+    {
+      "global_chunk_id": 31,
+      "file_id": 2,
+      "filename": "sample_doc_v2.txt",
+      "chunk_index": 3,
+      "byte_offset": 54079,
+      "byte_length": 8843,
+      "sha256": "e125b29177dcea153142b3f8d9a14033040750ef214aba4ed288f6c97bdb06c7"
+    },
+    {
+      "global_chunk_id": 32,
+      "file_id": 2,
+      "filename": "sample_doc_v2.txt",
+      "chunk_index": 4,
+      "byte_offset": 62922,
+      "byte_length": 10551,
+      "sha256": "2d768fa21b718dce8d53a2a8d5c1f3217b7d41f461226149bc87a654a668791e"
+    },
+    {
+      "global_chunk_id": 33,
+      "file_id": 2,
+      "filename": "sample_doc_v2.txt",
+      "chunk_index": 5,
+      "byte_offset": 73473,
+      "byte_length": 14700,
+      "sha256": "ab9fecc6aa8a920ad163b39f351e5117cd466c210f35b336335fc0b0edc1f4e6"
+    },
+    {
+      "global_chunk_id": 34,
+      "file_id": 2,
+      "filename": "sample_doc_v2.txt",
+      "chunk_index": 6,
+      "byte_offset": 88173,
+      "byte_length": 25545,
+      "sha256": "a1ca3d7cec8c606ba794f510f3f8e6b624b6a0e311619beff9693926719724b8"
+    },
+    {
+      "global_chunk_id": 35,
+      "file_id": 2,
+      "filename": "sample_doc_v2.txt",
+      "chunk_index": 7,
+      "byte_offset": 113718,
+      "byte_length": 23187,
+      "sha256": "864718de52ba45a51cbc0600f8049dd233b8176608bfab4056d2d41895581693"
+    },
+    {
+      "global_chunk_id": 36,
+      "file_id": 2,
+      "filename": "sample_doc_v2.txt",
+      "chunk_index": 8,
+      "byte_offset": 136905,
+      "byte_length": 15921,
+      "sha256": "c29f3c6e1c9657ab0810512e529ed136f800bf7b5da54da146e57dd787f767b5"
+    },
+    {
+      "global_chunk_id": 37,
+      "file_id": 2,
+      "filename": "sample_doc_v2.txt",
+      "chunk_index": 9,
+      "byte_offset": 152826,
+      "byte_length": 26780,
+      "sha256": "90b9dc94a73f931d2df8840b85bcd94443b1fcaeb661a86dd88bd040b7fc01ad"
+    },
+    {
+      "global_chunk_id": 38,
+      "file_id": 2,
+      "filename": "sample_doc_v2.txt",
+      "chunk_index": 10,
+      "byte_offset": 179606,
+      "byte_length": 32768,
+      "sha256": "4db336b275a8f29931c33c05a5f7521be049ba6d4f7ed4dc1598f722a9383e7b"
+    },
+    {
+      "global_chunk_id": 39,
+      "file_id": 2,
+      "filename": "sample_doc_v2.txt",
+      "chunk_index": 11,
+      "byte_offset": 212374,
+      "byte_length": 10606,
+      "sha256": "a5f9455fe8ccd59b0eeb593bb566baa96123b71847f3302119ddbbc96df4034e"
+    },
+    {
+      "global_chunk_id": 40,
+      "file_id": 2,
+      "filename": "sample_doc_v2.txt",
+      "chunk_index": 12,
+      "byte_offset": 222980,
+      "byte_length": 20055,
+      "sha256": "296d509deef1c8c43b01acf0e93512303c02dc43c4e661a4bc214169d79bb547"
+    },
+    {
+      "global_chunk_id": 41,
+      "file_id": 2,
+      "filename": "sample_doc_v2.txt",
+      "chunk_index": 13,
+      "byte_offset": 243035,
+      "byte_length": 373,
+      "sha256": "622b3a5647760a9078156974ba095c8b156deb6adc55b1a77c0f2b2ee105118b"
+    },
+    {
+      "global_chunk_id": 42,
+      "file_id": 3,
+      "filename": "sample_unrelated.txt",
+      "chunk_index": 0,
+      "byte_offset": 0,
+      "byte_length": 9879,
+      "sha256": "be139119daef4ae12ab3708671b17b93a437e773cd711e745bd0dfed22b0e903"
+    },
+    {
+      "global_chunk_id": 43,
+      "file_id": 3,
+      "filename": "sample_unrelated.txt",
+      "chunk_index": 1,
+      "byte_offset": 9879,
+      "byte_length": 9817,
+      "sha256": "d0e5cf195999b4e6e249c9212374e3aa4010ed1745319e92bcb6545515b8cad8"
+    },
+    {
+      "global_chunk_id": 44,
+      "file_id": 3,
+      "filename": "sample_unrelated.txt",
+      "chunk_index": 2,
+      "byte_offset": 19696,
+      "byte_length": 14346,
+      "sha256": "dd4f4c8da6554585f7f233fd2044442af3aa73f398874c579fff6433aef3d784"
+    },
+    {
+      "global_chunk_id": 45,
+      "file_id": 3,
+      "filename": "sample_unrelated.txt",
+      "chunk_index": 3,
+      "byte_offset": 34042,
+      "byte_length": 32768,
+      "sha256": "b5909333eea3c47dd94ae3bc23fdaa1c7247cf85df5393d026c8813e969621d0"
+    },
+    {
+      "global_chunk_id": 46,
+      "file_id": 3,
+      "filename": "sample_unrelated.txt",
+      "chunk_index": 4,
+      "byte_offset": 66810,
+      "byte_length": 32768,
+      "sha256": "f85f87727066c006b5dc7002fe3efb10dddc1e86380633c9159a13a7538fafcf"
+    },
+    {
+      "global_chunk_id": 47,
+      "file_id": 3,
+      "filename": "sample_unrelated.txt",
+      "chunk_index": 5,
+      "byte_offset": 99578,
+      "byte_length": 10586,
+      "sha256": "000e1dd509df08f40b5e029bc3635fe1499cead855d34639d387a012554f1ff7"
+    },
+    {
+      "global_chunk_id": 48,
+      "file_id": 3,
+      "filename": "sample_unrelated.txt",
+      "chunk_index": 6,
+      "byte_offset": 110164,
+      "byte_length": 9109,
+      "sha256": "0931324e04ddcfda4445678680f07c08647c2ec3efc13f6344543e65b4016130"
+    },
+    {
+      "global_chunk_id": 49,
+      "file_id": 3,
+      "filename": "sample_unrelated.txt",
+      "chunk_index": 7,
+      "byte_offset": 119273,
+      "byte_length": 13206,
+      "sha256": "61507d334977d01f7e05252d2f3d9f57958d18f161c786e0844f1cf55d0cec86"
+    },
+    {
+      "global_chunk_id": 50,
+      "file_id": 3,
+      "filename": "sample_unrelated.txt",
+      "chunk_index": 8,
+      "byte_offset": 132479,
+      "byte_length": 8483,
+      "sha256": "7829cffdb4a9419b895c6a1a0a88d7226796f39e174abc05e191eca1c58578c7"
+    }
+  ]
+}
