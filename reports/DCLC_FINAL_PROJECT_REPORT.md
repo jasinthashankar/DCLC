@@ -3,7 +3,7 @@
 ## A PROJECT REPORT
 
 ### Submitted By
-**JASINTH ASHANKAR**  
+**JASINTHA SHANKAR**  
 *(Register No: Final Year B.E. / B.Tech)*
 
 *In partial fulfillment for the award of the degree of*  
@@ -19,7 +19,7 @@
 
 ## BONAFIDE CERTIFICATE
 
-Certified that this project report titled **"DEEP CONTRASTIVE LEARNING–BASED REDUNDANCY ELIMINATION FOR SIMILAR DATA IN CLOUD STORAGE SYSTEMS (DCLC)"** is the bonafide work of **JASINTH ASHANKAR**, who carried out the project work under my supervision.
+Certified that this project report titled **"DEEP CONTRASTIVE LEARNING–BASED REDUNDANCY ELIMINATION FOR SIMILAR DATA IN CLOUD STORAGE SYSTEMS (DCLC)"** is the bonafide work of **JASINTHA SHANKAR**, who carried out the project work under my supervision.
 
 $$\begin{array}{cc}
 \textbf{SIGNATURE} & \textbf{SIGNATURE} \\
