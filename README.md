@@ -201,6 +201,6 @@ DCLC/
 
 ## 8. Authors & Acknowledgments
 
-- **Student Developer:** Jasinth Ashankar (Final-Year CSE)
+- **Student Developer:** Jasintha Shankar (Final-Year CSE)
 - **Faculty Guide / Reviewer:** Department of Computer Science & Engineering
 - **Academic Citation:** Xiao, L., Fang, Q., & Feng, S. (2026). Deep contrastive learning–based redundancy elimination for similar data in cloud storage systems. *Cluster Computing*.
