@@ -8,7 +8,8 @@
 
 > Final Year Computer Science & Engineering Capstone Project  
 > **Reference Paper:** Ling Xiao, Qinbao Fang, and Shihao Feng (2026). *“Deep contrastive learning–based redundancy elimination for similar data in cloud storage systems”*, Cluster Computing.  
-> **DOI:** [10.1007/s44443-026-01042-5](https://doi.org/10.1007/s44443-026-01042-5)
+> **DOI:** [10.1007/s44443-026-01042-5](https://doi.org/10.1007/s44443-026-01042-5)  
+> **Repository:** [https://github.com/jasinthashankar/DCLC](https://github.com/jasinthashankar/DCLC)
 
 ---
 
@@ -69,24 +70,7 @@ flowchart TD
 
 ---
 
-## 3. Technology Stack
-
-- **Backend Runtime:** Python 3.13.10 (64-bit Windows)
-- **API Framework:** FastAPI 0.115+, Uvicorn ASGI server
-- **Deep Learning Framework:** PyTorch 2.14+ (CPU / CUDA compatible)
-- **Chunking Engine:** `fastcdc` official content-defined chunking library
-- **Nearest Neighbor Indexer:** `scikit-learn` `BallTree` *(Exact metric tree search replacement for Annoy on Windows Python 3.13)*
-- **Compression & Hashing:** Standard library `zlib` (preset dictionary compression), `hashlib` (cryptographic SHA-256)
-- **Frontend Stack:** React 19.2, TypeScript 5.8+, Vite 8.3, Tailwind CSS v4, Lucide React icons
-- **Automated Testing:** `pytest` (Python backend, 269 tests), `vitest` (Frontend units)
-
-> [!NOTE]
-> **Annoy vs. BallTree Architecture Note:**
-> In the original paper, Annoy is suggested for Tier 2 approximate nearest neighbor search. In this implementation on Windows Python 3.13, we deploy `BallTree` over $L_2$-normalized unit vectors. For unit vectors, Euclidean distance $d$ and Cosine similarity satisfy $\text{cosine\_similarity} = 1 - \frac{d^2}{2}$. Unlike approximate graph/tree methods, `BallTree` guarantees 100% exact nearest neighbor retrieval without indexing approximations, perfectly suiting our evaluation scale.
-
----
-
-## 4. Key Research Results (Held-Out Test Split)
+## 3. Empirical Research Results & Output Visualizations
 
 Evaluated on the held-out test split (families 085–099, 464 chunks, 3.56 MB logical raw data):
 
@@ -100,6 +84,29 @@ Evaluated on the held-out test split (families 085–099, 464 chunks, 3.56 MB lo
 | **System 3C: DCLC-SR (Embedding k-NN K=20)** | 479,304 B | 86.55% | 7.44x | 434 deltas | 100.0% |
 | **System 3D: DCLC-SR (Hierarchical Cache + BallTree)** | 459,858 B | 87.10% | 7.75x | 434 deltas | 100.0% |
 | **System 4: DCLC-MRD (Hierarchical + MRD W=3)** | **439,173 B** | **87.68%** | **8.12x** | **153 groups** | **100.0%** |
+
+### Output Visualizations & Benchmarks
+
+![DCLC Evaluation Results](assets/dclc_evaluation_results.png)
+
+![DCLC MRD Trade-off & Candidate Reduction](assets/dclc_mrd_tradeoff.png)
+
+---
+
+## 4. Technology Stack
+
+- **Backend Runtime:** Python 3.13.10 (64-bit Windows)
+- **API Framework:** FastAPI 0.115+, Uvicorn ASGI server
+- **Deep Learning Framework:** PyTorch 2.14+ (CPU / CUDA compatible)
+- **Chunking Engine:** `fastcdc` official content-defined chunking library
+- **Nearest Neighbor Indexer:** `scikit-learn` `BallTree` *(Exact metric tree search replacement for Annoy on Windows Python 3.13)*
+- **Compression & Hashing:** Standard library `zlib` (preset dictionary compression), `hashlib` (cryptographic SHA-256)
+- **Frontend Stack:** React 19.2, TypeScript 5.8+, Vite 8.3, Tailwind CSS v4, Lucide React icons
+- **Automated Testing:** `pytest` (Python backend, 269 tests), `vitest` (Frontend units)
+
+> [!NOTE]
+> **Annoy vs. BallTree Architecture Note:**
+> In the original paper, Annoy is suggested for Tier 2 approximate nearest neighbor search. In this implementation on Windows Python 3.13, we deploy `BallTree` over $L_2$-normalized unit vectors. For unit vectors, Euclidean distance $d$ and Cosine similarity satisfy $\text{cosine\_similarity} = 1 - \frac{d^2}{2}$. Unlike approximate graph/tree methods, `BallTree` guarantees 100% exact nearest neighbor retrieval without indexing approximations, perfectly suiting our evaluation scale.
 
 ---
 
@@ -183,6 +190,9 @@ DCLC/
 │   ├── research_evaluation_report.md
 │   ├── dclc_final_research_report.md
 │   └── hod_demo_guide.md
+├── assets/                     # Visualizations and benchmark charts
+│   ├── dclc_evaluation_results.png
+│   └── dclc_mrd_tradeoff.png
 └── scripts/                    # Evaluation and benchmarking scripts
     └── run_research_evaluation.py
 ```
