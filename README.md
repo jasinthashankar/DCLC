@@ -33,38 +33,38 @@ Modern cloud repositories store massive volumes of multi-version data, such as s
 ```mermaid
 flowchart TD
     subgraph Ingestion["1. Data Ingestion & Boundary Absorption"]
-        Raw[Raw Target / Base Files] --> FastCDC[FastCDC Chunking<br/>Min: 2KB, Avg: 4KB, Max: 8KB]
-        FastCDC --> Chunks[Variable-Sized Chunks]
+        Raw["Raw Target / Base Files"] --> FastCDC["FastCDC Chunking (2KB - 8KB)"]
+        FastCDC --> Chunks["Variable-Sized Chunks"]
     end
 
     subgraph FeaturePipeline["2. Feature & Context Extraction"]
-        Chunks --> Alg1[Algorithm 1 Multi-Scale Shingles<br/>128-dim Initial Feature]
-        Alg1 --> ContextWin[Context Window Assembly<br/>Radius=4, SeqLen=9]
-        ContextWin --> TransEncoder[2-Layer Transformer Encoder<br/>Context-Aware Embeddings]
+        Chunks --> Alg1["Algorithm 1 Multi-Scale Shingles (128-dim)"]
+        Alg1 --> ContextWin["Context Window Assembly (R=4, L=9)"]
+        ContextWin --> TransEncoder["2-Layer Transformer Encoder"]
     end
 
     subgraph HierarchicalRetrieval["3. Locality-Aware Candidate Retrieval"]
-        TransEncoder --> ExactCheck{Exact SHA-256<br/>Match?}
-        ExactCheck -- Yes --> DedupPointer[Zero-Payload Pointer<br/>32-Byte Hash Entry]
-        ExactCheck -- No --> Tier1Cache{Tier 1: Bounded Cache<br/>FIFO Size=64, Sim >= 0.70?}
-        Tier1Cache -- Hit --> CandidateRef[Selected Candidate]
-        Tier1Cache -- Miss --> Tier2Tree[Tier 2: BallTree Search<br/>Exact Euclidean Tree Query]
+        TransEncoder --> ExactCheck{"Exact SHA-256 Match?"}
+        ExactCheck -->|Yes| DedupPointer["Zero-Payload Pointer (32-Byte Hash)"]
+        ExactCheck -->|No| Tier1Cache{"Tier 1: Bounded FIFO Cache (Size 64)"}
+        Tier1Cache -->|Hit| CandidateRef["Selected Candidate Chunk"]
+        Tier1Cache -->|Miss| Tier2Tree["Tier 2: BallTree Exact Metric Search"]
         Tier2Tree --> CandidateRef
     end
 
     subgraph DeltaEngine["4. Verified Delta Compression Engine"]
-        CandidateRef --> DeltaMode{Delta Mode?}
-        DeltaMode -- Single (SR) --> SR_Encode[Preset Dictionary zlib<br/>Target vs Single Base]
-        DeltaMode -- Multi (MRD) --> MRD_Encode[DCLC_M01 Group Container<br/>Window=3, MaxRefs=3]
-        SR_Encode --> VerifyBitExact[Bit-Exact Decode Verification]
+        CandidateRef --> DeltaMode{"Delta Compression Mode?"}
+        DeltaMode -->|Single SR| SR_Encode["Preset Dictionary zlib"]
+        DeltaMode -->|Multi MRD| MRD_Encode["DCLC_M01 Group Container"]
+        SR_Encode --> VerifyBitExact["Bit-Exact Decode Verification (100%)"]
         MRD_Encode --> VerifyBitExact
     end
 
     subgraph DurableStorage["5. Durable Storage Lifecycle"]
-        VerifyBitExact --> AtomicStore[Atomic Write via .tmp Rename]
-        AtomicStore --> ChunksDir[chunks/ SHA256.bin]
-        AtomicStore --> DeltasDir[deltas/ SHA256.bin]
-        AtomicStore --> RecipeDir[revisions/ rev_ID.json]
+        VerifyBitExact --> AtomicStore["Atomic Write (.tmp Rename)"]
+        AtomicStore --> ChunksDir["chunks/ (Content-Addressed Chunks)"]
+        AtomicStore --> DeltasDir["deltas/ (Content-Addressed Containers)"]
+        AtomicStore --> RecipeDir["revisions/ (Durable JSON Recipes)"]
     end
 ```
 
